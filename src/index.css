@@ -1,5 +1,4 @@
 .snow, .winter {
-  z-index: 2;
   pointer-events: none;
 }
 
@@ -54,33 +53,3 @@
     transform: translate3D(7.5%, 100%, 0);
   }
 }
-/*:root {
-    --snow-near: 10s;
-    --snow-mid: (var(--snow-near) * 2);
-    --snow-far: (var(--snow-near) * 3);
-    --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.winter {
-    z-index: 100;
-    pointer-events: none;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
-}
-
-.snow {
-    z-index: 100;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    animation: falling linear infinite both;
-    transform: translate3D(0, -100%, 0);
-}
-*/
