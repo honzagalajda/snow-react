@@ -1,6 +1,6 @@
 {
   "name": "snow-react",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "React components that creates falling snowflakes on your site.",
   "main": "./build/index.js",
   "scripts": {
@@ -34,5 +34,5 @@
   "bugs": {
     "url": "https://github.com/honzagalajda/snow-react/issues"
   },
-  "homepage": "https://github.com/honzagalajda/snow-react/README.md"
+  "homepage": "https://github.com/honzagalajda/snow-react/blob/master/README.md"
 }
