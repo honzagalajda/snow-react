@@ -4,7 +4,7 @@
 
 .winter {
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   top: 0;
   height: 100%;
   width: 100%;
@@ -22,7 +22,7 @@
 }
 .snow--near {
   animation-duration: 10s;
-  background-image: url("http://honzagalajda.cekuj.net/www/img/snow-large.png");
+  background-image: url("http://honzagalajda.cekuj.net/www/img/snow-large-svg.svg");
   background-size: contain;
 }
 .snow--near + .snow--alt {
@@ -30,7 +30,7 @@
 }
 .snow--mid {
   animation-duration: 20s;
-  background-image: url("http://honzagalajda.cekuj.net/www/img/snow-medium.png");
+  background-image: url("http://honzagalajda.cekuj.net/www/img/snow-medium-svg.svg");
   background-size: contain;
 }
 .snow--mid + .snow--alt {
@@ -38,7 +38,7 @@
 }
 .snow--far {
   animation-duration: 30s;
-  background-image: url("http://honzagalajda.cekuj.net/www/img/snow-small.png");
+  background-image: url("http://honzagalajda.cekuj.net/www/img/snow-small-svg.svg");
   background-size: contain;
 }
 .snow--far + .snow--alt {

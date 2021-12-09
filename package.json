@@ -1,7 +1,7 @@
 {
   "name": "snow-react",
-  "version": "1.0.1",
-  "description": "Christmas is coming…",
+  "version": "1.0.2",
+  "description": "React components that creates falling snowflakes on your site.",
   "main": "./build/index.js",
   "scripts": {
     "build": "webpack"
@@ -9,7 +9,8 @@
   "keywords": [
     "Snow",
     "React",
-    "Christmas"
+    "Christmas",
+    "Winter"
   ],
   "author": "Honza Galajda",
   "license": "ISC",
@@ -27,7 +28,11 @@
     "react": "^17.0.2"
   },
   "repository": {
+    "type": "git",
     "url": "https://github.com/honzagalajda/snow-react"
   },
-  "homepage": "https://github.com/honzagalajda/snow-react"
+  "bugs": {
+    "url": "https://github.com/honzagalajda/snow-react/issues"
+  },
+  "homepage": "https://github.com/honzagalajda/snow-react/README.md"
 }
