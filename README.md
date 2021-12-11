@@ -1,5 +1,5 @@
 # React Snow
-React components that creates falling snowflakes on your site.
+Is react components that creates falling snowflakes on your site.
 ## Installation
 With npm
 ```
@@ -22,6 +22,7 @@ export default App;
 ```
 
 ## Configuration
+### Set z-index
 You can set specific z-index for every snowflakes.
 ```jsx
 <Snow 
@@ -33,5 +34,17 @@ You can set specific z-index for every snowflakes.
     zMid='2'
     //z-index for far snowflakes
     zFar='1'
+/>
+```
+### Set speed
+You also can set specific speed for every snowflake (default speed is 10).
+```jsx
+<Snow 
+    //speed for near snowflakes 
+    nearSpeed='15'
+    //speed for mid snowflakes 
+    midSpeed='15'
+    //speed for far snowflakes
+    farSpeed='15'
 />
 ```

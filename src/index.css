@@ -1,12 +1,12 @@
-.snow, .winter {
+.snow,
+.winter {
   pointer-events: none;
 }
 
 .winter {
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   top: 0;
-  height: 100%;
   width: 100%;
   max-width: 100%;
 }
@@ -21,28 +21,16 @@
   transform: translate3D(0, -100%, 0);
 }
 .snow--near {
-  animation-duration: 10s;
   background-image: url("http://honzagalajda.cekuj.net/www/img/snow-large-svg.svg");
-  background-size: contain;
-}
-.snow--near + .snow--alt {
-  animation-delay: 5s;
+  background-size: 980px;
 }
 .snow--mid {
-  animation-duration: 20s;
   background-image: url("http://honzagalajda.cekuj.net/www/img/snow-medium-svg.svg");
-  background-size: contain;
-}
-.snow--mid + .snow--alt {
-  animation-delay: 10s;
+  background-size: 980px;
 }
 .snow--far {
-  animation-duration: 30s;
   background-image: url("http://honzagalajda.cekuj.net/www/img/snow-small-svg.svg");
-  background-size: contain;
-}
-.snow--far + .snow--alt {
-  animation-delay: 15s;
+  background-size: 980px;
 }
 
 @keyframes falling {
@@ -51,5 +39,17 @@
   }
   100% {
     transform: translate3D(7.5%, 100%, 0);
+  }
+}
+
+@media (max-width: 1000px) {
+  .snow--mid {
+    background-size: contain;
+  }
+  .snow--far {
+    background-size: contain;
+  }
+  .snow--near {
+    background-size: contain;
   }
 }
