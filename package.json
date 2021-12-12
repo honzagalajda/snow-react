@@ -1,6 +1,6 @@
 {
   "name": "snow-react",
-  "version": "1.0.4",
+  "version": "1.1.5",
   "description": "Snow-react is react components that creates falling snowflakes on your site.",
   "main": "./build/index.js",
   "scripts": {

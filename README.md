@@ -14,7 +14,10 @@ import Snow from 'snow-react';
 function App() {
   return (
     <div>
-      <Snow />
+      <Snow 
+        //Set up height (by default its whole body height).
+        height='1080'
+      />
     </div>
   );
 }

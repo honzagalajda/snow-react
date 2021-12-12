@@ -1,51 +1,105 @@
 import React from 'react';
 import './index.css';
 
-const Snow = ({ zIndex, zNear, zMid, zFar, nearSpeed, midSpeed, farSpeed }) => {
+const Snow = ({ zIndex, zNear, zMid, zFar, nearSpeed, midSpeed, farSpeed, height }) => {
     const setSpeed = () => {
-        //Near speed
-        const near = document.getElementsByClassName('snow--near');
-        const nearAlt = document.getElementsByClassName('snow--near--alt');
-        const nearTime = (document.body.clientHeight * 2) / (21.6 * nearSpeed);
-        const nearDelay = nearTime / 2;
-        for (let i = 0; i < near.length; i++) {
-            near.item(i).style.animationDuration = nearTime + 's';
-        }
-        for (let i = 0; i < nearAlt.length; i++) {
-            nearAlt.item(i).style.animationDelay = nearDelay + 's';
-        }
-        //Mid speed
-        const mid = document.getElementsByClassName('snow--mid');
-        const midAlt = document.getElementsByClassName('snow--mid--alt');
-        const midTime = (document.body.clientHeight * 2) / (10.8 * midSpeed);
-        const midDelay = midTime / 2;
-        for (let i = 0; i < mid.length; i++) {
-            mid.item(i).style.animationDuration = midTime + 's';
-        }
-        for (let i = 0; i < midAlt.length; i++) {
-            midAlt.item(i).style.animationDelay = midDelay + 's';
-        }
-        //Far speed
-        const far = document.getElementsByClassName('snow--far');
-        const farAlt = document.getElementsByClassName('snow--far--alt');
-        const farTime = (document.body.clientHeight * 2) / (7.2 * farSpeed);
-        const farDelay = farTime / 2;
-        for (let i = 0; i < far.length; i++) {
-            far.item(i).style.animationDuration = farTime + 's';
-        }
-        for (let i = 0; i < farAlt.length; i++) {
-            farAlt.item(i).style.animationDelay = farDelay + 's';
+        if (!height) {
+            //Near speed
+            const near = document.getElementsByClassName('snow--near');
+            const nearAlt = document.getElementsByClassName('snow--near--alt');
+            const nearTime = (document.body.clientHeight * 2) / (21.6 * nearSpeed);
+            const nearDelay = nearTime / 2;
+            for (let i = 0; i < near.length; i++) {
+                near.item(i).style.animationDuration = nearTime + 's';
+            }
+            for (let i = 0; i < nearAlt.length; i++) {
+                nearAlt.item(i).style.animationDelay = nearDelay + 's';
+            }
+            //Mid speed
+            const mid = document.getElementsByClassName('snow--mid');
+            const midAlt = document.getElementsByClassName('snow--mid--alt');
+            const midTime = (document.body.clientHeight * 2) / (10.8 * midSpeed);
+            const midDelay = midTime / 2;
+            for (let i = 0; i < mid.length; i++) {
+                mid.item(i).style.animationDuration = midTime + 's';
+            }
+            for (let i = 0; i < midAlt.length; i++) {
+                midAlt.item(i).style.animationDelay = midDelay + 's';
+            }
+            //Far speed
+            const far = document.getElementsByClassName('snow--far');
+            const farAlt = document.getElementsByClassName('snow--far--alt');
+            const farTime = (document.body.clientHeight * 2) / (7.2 * farSpeed);
+            const farDelay = farTime / 2;
+            for (let i = 0; i < far.length; i++) {
+                far.item(i).style.animationDuration = farTime + 's';
+            }
+            for (let i = 0; i < farAlt.length; i++) {
+                farAlt.item(i).style.animationDelay = farDelay + 's';
+            }
+        } else {
+            //Near speed
+            const near = document.getElementsByClassName('snow--near');
+            const nearAlt = document.getElementsByClassName('snow--near--alt');
+            const nearTime = (height * 2) / (21.6 * nearSpeed);
+            const nearDelay = nearTime / 2;
+            for (let i = 0; i < near.length; i++) {
+                near.item(i).style.animationDuration = nearTime + 's';
+            }
+            for (let i = 0; i < nearAlt.length; i++) {
+                nearAlt.item(i).style.animationDelay = nearDelay + 's';
+            }
+            //Mid speed
+            const mid = document.getElementsByClassName('snow--mid');
+            const midAlt = document.getElementsByClassName('snow--mid--alt');
+            const midTime = (height * 2) / (10.8 * midSpeed);
+            const midDelay = midTime / 2;
+            for (let i = 0; i < mid.length; i++) {
+                mid.item(i).style.animationDuration = midTime + 's';
+            }
+            for (let i = 0; i < midAlt.length; i++) {
+                midAlt.item(i).style.animationDelay = midDelay + 's';
+            }
+            //Far speed
+            const far = document.getElementsByClassName('snow--far');
+            const farAlt = document.getElementsByClassName('snow--far--alt');
+            const farTime = (height * 2) / (7.2 * farSpeed);
+            const farDelay = farTime / 2;
+            for (let i = 0; i < far.length; i++) {
+                far.item(i).style.animationDuration = farTime + 's';
+            }
+            for (let i = 0; i < farAlt.length; i++) {
+                farAlt.item(i).style.animationDelay = farDelay + 's';
+            }
         }
     }
 
+    //Set winter height
+    const setUpHeight = () => {
+        if (!height) {
+            const winters = document.getElementsByClassName('winter');
+            for (let i = 0; i < winters.length; i++) {
+                winters.item(i).style.height = document.body.clientHeight + 'px';
+            }
+        } else {
+            const winters = document.getElementsByClassName('winter');
+            for (let i = 0; i < winters.length; i++) {
+                winters.item(i).style.height = height + 'px';
+            }
+        }
+    }
+
+    const checkHeight = () => {
+        setInterval(() => {
+            setUpHeight();
+        }, 1000);
+    }
     window.onload = () => {
-        //Set winter height
-        const winters = document.getElementsByClassName('winter');
-        for (let i = 0; i < winters.length; i++) {
-            winters.item(i).style.height = document.body.clientHeight + 'px';
+        setUpHeight();
+        if (!height) {
+            checkHeight();
         }
         //Set constant speed
-
         if (!nearSpeed) {
             nearSpeed = 10;
         }
@@ -83,6 +137,7 @@ const Snow = ({ zIndex, zNear, zMid, zFar, nearSpeed, midSpeed, farSpeed }) => {
             }
         }
     }
+
 
     return (
         <div className="winter">
