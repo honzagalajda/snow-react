@@ -87,6 +87,7 @@ const Snow = ({ zIndex, zNear, zMid, zFar, nearSpeed, midSpeed, farSpeed, height
                 winters.item(i).style.height = height + 'px';
             }
         }
+        setSpeed();
     }
 
     const checkHeight = () => {
